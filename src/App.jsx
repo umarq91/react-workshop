@@ -1,22 +1,26 @@
-import Button from "./Button"
-import {Body} from "./component/Body"
-import Footer from "./component/Footer"
-import Header from "./component/Header"
+
+import Main from "./component/Main"
+import Navbar from "./component/Navbar"
+import Sidebar from "./component/Sidebar"
 
 const App=()=>{
-
+const myObj = {
+    name:"umer",
+    rollNo:34,
+    link:"https://google.com"
+}
 
 return(
-<> 
-<div className="ml-10 bg-red-700 h-screen flex text-white flex-col items-center justify-between">
-<Header/>
+    <div className=" h-[100%]">
 
-<Body/>
+        <Navbar/>
+        <div className="flex">
 
+        <Sidebar/>
+        <Main/>
+        </div>
 
-<Footer/>
-</div>
-</>
+    </div>
 )
 }
 

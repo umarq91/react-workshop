@@ -1,0 +1,32 @@
+
+// Jsx
+
+--  JSX is a syntax extension for JavaScript which allows us to treat HTML as expressions.
+   -They can be stored in variables, objects, arrays, and more!
+--  JSX elements can have attributes and be nested within each other, just like in HTML.
+--  JSX must have exactly one outer element, and other elements can be nested inside.
+-- createRoot() from react-dom/client can be used to create a React root at the specified DOM element.
+-- A React root’s render() method can be used to render JSX on the screen.
+
+
+- class vs className
+- self closing tags eg img , input , br 
+- using js in html 
+- returning another component
+
+                                                -Let’s recap
+A React application can contain multiple components.
+Components can interact with each other by returning instances of each other.
+Components interacting allows them to be broken into smaller components, stored into separate files, and reused when necessary.
+
+
+
+Props 
+you should be able to:
+
+Pass, access, and display props.
+Use props to create conditional statements.
+Define event handlers in a component and pass them to other components.
+Work with a component’s children.
+Assign default values to props.
+ 
