@@ -3,6 +3,7 @@ import { useState } from "react"
 import Main from "./component/Main"
 import Navbar from "./component/Navbar"
 import Sidebar from "./component/Sidebar"
+import TodoListMain from "./TodoList/TodoListMain"
 
 const App=()=>{
     const [count,setCount] = useState(0)
@@ -14,18 +15,25 @@ const myObj = {
 
 
 return(
-    <div className=" h-[100%]">
+    <>
+  {  // <div className=" h-[100%]">
 
-        <Navbar/>
-        <div className="flex">
+    //     <Navbar/>
+    //     <div className="flex">
 
-        <Sidebar/>
-        <Main/>
+    //     <Sidebar/>
+    //     <Main/>
 
 
-        </div>
+    //     </div>
 
-    </div>
+    // </div>
+}
+    <TodoListMain/>
+
+
+
+    </>
 )
 }
 
