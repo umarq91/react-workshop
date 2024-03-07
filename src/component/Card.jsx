@@ -7,15 +7,15 @@ const Card = (props) => {
     const [subscribe,setSubscribe] = useState("Subscribe")
     const [like,setLiked] = useState("Like")
   const [isLiked , setIsLiked ] = useState(false)
-    function handleSubscribe(){
   
-      if(subscribe === "Subscribe"){
-        setSubscribe("Subscribed")
-      }else{
-        setSubscribe("Subscribe")
+    function handleSubscribe() {
+      if (subscribe === "Subscribe") {
+        setSubscribe("Subscribed");
+      } else {
+        setSubscribe("Subscribe");
       }
-// subscribe= "subscribed"
-  }
+      // subscribe= "subscribed"
+    }
 
   function handleLike(){
 
