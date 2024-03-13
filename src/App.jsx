@@ -4,6 +4,7 @@ import Main from "./component/Main"
 import Navbar from "./component/Navbar"
 import Sidebar from "./component/Sidebar"
 import TodoListMain from "./TodoList/TodoListMain"
+import TypingMain from "./typing-test/Typing-Main"
 
 const App=()=>{
     const [count,setCount] = useState(0)
@@ -29,8 +30,11 @@ return(
 
     // </div>
 }
-    <TodoListMain/>
-
+    {/* <TodoListMain/> */}
+<div className="bg-gray-700 h-screen flex justify-center items-center flex-col">
+<h1 className="text-white text-3xl">Typing Game</h1>
+<TypingMain/>
+</div>
 
 
     </>
