@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Main from "./component/Main"
 import Navbar from "./component/Navbar"
 import Sidebar from "./component/Sidebar"
@@ -7,12 +7,25 @@ import TodoListMain from "./TodoList/TodoListMain"
 import TypingMain from "./typing-test/Typing-Main"
 
 const App=()=>{
-    const [count,setCount] = useState(0)
-const myObj = {
-    name:"umer",
-    rollNo:34,
-    link:"https://google.com"
-}
+    const [data,setData] = useState()
+    const [loading,setLoading] = useState(false)
+
+
+    
+
+
+    useEffect(() => {
+      const getText = async () => {
+        setLoading(true);
+        const res = await fetch(
+          "https://baconipsum.com/api/?type=all-meat&paras=5&format=json"
+        );
+        const data = await res.json();
+        setLoading(false)
+        setData(data);
+      };
+      getText();
+    }, []);
 
 
 return(
@@ -32,8 +45,10 @@ return(
 }
     {/* <TodoListMain/> */}
 <div className="bg-gray-700 h-screen flex justify-center items-center flex-col">
-<h1 className="text-white text-3xl">Typing Game</h1>
-<TypingMain/>
+
+{loading && <h1 className="text-white text-3xl">Loading...</h1>}
+{data &&  <TypingMain  data={data[0]}/>}
+
 </div>
 
 
